@@ -1,4 +1,4 @@
-# 📁 OneDrive Fullstack POC – React + Node.js + Microsoft Graph API
+# OneDrive Fullstack POC – React + Node.js + Microsoft Graph API
 
 This is a Proof-of-Concept (POC) fullstack application built with **React (JavaScript)** and **Node.js (Express)** that integrates with **Microsoft OneDrive** using **Microsoft Graph API** and **OAuth 2.0 delegated user flow**.
 
@@ -11,7 +11,7 @@ The app enables users to:
 
 ---
 
-## 🧩 Tech Stack
+## Tech Stack
 
 | Layer     | Stack                     |
 |-----------|---------------------------|
@@ -22,18 +22,18 @@ The app enables users to:
 
 ---
 
-## ⚙️ Features
+## Features
 
-- 🔐 Microsoft OAuth 2.0 login (delegated access)
-- 📁 List/Create/Update/Delete files and folders
-- 🔄 Upload files (<4MB)
-- 👀 View items shared with user
-- 📤 Share files with internal/external users or groups
-- ✅ Assign roles: read-only / write
+- Microsoft OAuth 2.0 login (delegated access)
+- List/Create/Update/Delete files and folders
+- Upload files (<4MB)
+- View items shared with user
+- Share files with internal/external users or groups
+- Assign roles: read-only / write
 
 ---
 
-## 🔐 Prerequisites
+## Prerequisites
 
 - Node.js `v18+`
 - Microsoft 365 Developer Account or Business Account
@@ -41,9 +41,9 @@ The app enables users to:
 
 ---
 
-## 🧭 Setup Instructions
+## Setup Instructions
 
-### 1️⃣ Create Azure AD App
+### Create Azure AD App
 
 1. Visit: [Azure Portal – App Registrations](https://portal.azure.com/#blade/Microsoft_AAD_RegisteredApps/ApplicationsListBlade)
 2. Click **"New registration"**
@@ -54,8 +54,8 @@ The app enables users to:
 
 4. Once registered, go to:
    - `Authentication` → Enable:
-     - ✅ Access tokens
-     - ✅ ID tokens
+     - Access tokens
+     - ID tokens
    - `Certificates & Secrets` → Add a **client secret**
    - `API Permissions` → Add delegated Graph API permissions:
      - `Files.ReadWrite.All`
@@ -63,14 +63,14 @@ The app enables users to:
      - `User.Read`
      - `Group.Read.All`
 
-> 🛡️ If you're not an admin, send the **admin consent link** to your tenant admin:
+> If you're not an admin, send the **admin consent link** to your tenant admin:
 > ```
 > https://login.microsoftonline.com/common/adminconsent?client_id=YOUR_CLIENT_ID
 > ```
 
 ---
 
-### 2️⃣ Clone the Repository
+### Clone the Repository
 
 ```bash
 git clone https://github.com/YOUR_USERNAME/onedrive-fullstack-poc.git
@@ -79,7 +79,7 @@ cd onedrive-fullstack-poc
 
 ---
 
-### 3️⃣ Backend Setup
+### Backend Setup
 
 ```bash
 cd backend
@@ -102,7 +102,7 @@ npm start
 
 ---
 
-### 4️⃣ Frontend Setup
+### Frontend Setup
 
 ```bash
 cd ../frontend
@@ -114,7 +114,7 @@ App will be live at: `http://localhost:3000`
 
 ---
 
-## 🔄 OAuth Flow Summary
+## OAuth Flow Summary
 
 1. Frontend opens Microsoft OAuth login URL
 2. Microsoft redirects to `/auth/callback` with auth code
@@ -124,7 +124,7 @@ App will be live at: `http://localhost:3000`
 
 ---
 
-## 📂 Folder Structure
+## Folder Structure
 
 ```
 onedrive-fullstack-poc/
@@ -146,30 +146,7 @@ onedrive-fullstack-poc/
 
 ---
 
-## 💡 Future Improvements
-
-- Refresh token storage (Redis/DB)
-- Role-based org permissions
-- Support >4MB file chunked uploads
-- Document preview and versioning
-- Audit logging for HIPAA compliance
-
----
-
-## ❓FAQs
-
-**Can I use personal OneDrive accounts?**  
-🔒 No. Only **business/work accounts** support Graph API with `Files.ReadWrite.All` scope.
-
-**Can I register an app as a developer?**  
-✅ Yes. Use Microsoft 365 Developer Program or your org account.
-
-**Can I test with personal tenants?**  
-🧪 Yes, by using the [Microsoft 365 Developer Program](https://developer.microsoft.com/en-us/microsoft-365/dev-program).
-
----
-
-## 🙌 Acknowledgements
+## Acknowledgements
 
 - [Microsoft Graph API Docs](https://learn.microsoft.com/en-us/graph/)
 - [Microsoft Identity Platform](https://learn.microsoft.com/en-us/azure/active-directory/develop/)
