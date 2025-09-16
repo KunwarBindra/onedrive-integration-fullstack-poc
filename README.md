@@ -124,28 +124,6 @@ App will be live at: `http://localhost:3000`
 
 ---
 
-## Folder Structure
-
-```
-onedrive-fullstack-poc/
-├── backend/
-│   ├── index.js
-│   ├── routes/
-│   │   └── drive.js
-│   ├── services/
-│   │   └── graph.js
-│   └── .env
-└── frontend/
-    ├── public/
-    ├── src/
-    │   ├── components/
-    │   ├── pages/
-    │   └── App.js
-    └── .env
-```
-
----
-
 ## Acknowledgements
 
 - [Microsoft Graph API Docs](https://learn.microsoft.com/en-us/graph/)
